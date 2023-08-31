@@ -1,81 +1,243 @@
-# TinDog Project
+## Bootstrap
 
-HINT: To fiure out which Bootstrap components/snippets are used. Refer to the PDF below:
-https://github.com/appbrewery/tindog/blob/main/Bootstrap-snippets.pdf
+### Introduction
 
-## SVGs:
+​		One of the many **external** CSS layout systems, it contains pre-made CSS files, which we can simply include into our project in order to use their pre-built components and styling.
 
-Apple Logo:
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-apple mb-1" viewBox="0 0 16 16">
-<path
-                  d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
-<path
-                  d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
-</svg>
+​		*(There are more CSS Frameworks such as Animate, Foundation, MUI, Tailwind...)*
 
-Google Play Logo:
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-google-play mb-1" viewBox="0 0 16 16">
-<path
-                  d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z" />
-</svg>
+​		Bootstrap has a **12 column layout system** built on top of Flexbox, this makes it very easy to create responsive websites and websites that simply just work and look great on mobile or desktop. *(Mobile First)* 
 
-Checkmark:
-<svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-check2-circle"
-              viewBox="0 0 16 16">
-<path
-                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
-<path
-                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
-</svg>
+```html
+<ul>
+    <li>
+        <button>Home</button>
+    </li>
+</ul>
+```
 
-Hat:
-<svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-<path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z"/>
-<path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z"/>
-</svg>
+* Let’s say we have a button on our website.
+* But this button has nothing special.
 
-Heart:
-<svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-arrow-through-heart"
-              viewBox="0 0 16 16">
-<path fill-rule="evenodd"
-                d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z" />
-</svg>
+```html
+<ul class="nav nav-pills">
+    <li>
+        <button class="nav-link active rounded-5">Home</button>
+    </li>
+</ul>
+```
 
-## Text:
+```css
+.nav{...}
+.nav-pills{...}
+.nav-link{...}
+.active{...}
+.rounded-5{...}
+```
 
-Meet new and interesting dogs nearby.
+* If we included 5 classes from Bootstrap(booststrap.css), and included those pre-built CSS into our project.
+* All we have to do is to add these styling and components to our HTML.
+* *We don’t have to worry about writing all of the CSS code, all we need to know is which classes we need to add to our HTML.*
 
-Easy to use.
-So easy to use, even your dog could do it.
+---
 
-Elite Clientele.
-We have all the dogs, the greatest dogs.
+### Something to know...
 
-Guaranteed to work.
-Find the love of your dog's life or your money back.
+**Pros of using CSS Frameworks**
 
-"I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof."
-Pebbles, New York
+1. Easy and Fast to use.
+2. A ton of pre-built components.
+3. Consistent styling across our website.
 
-A Plan for Every Dog's Needs
-Simple and affordable price plans for you and your dog.
+**Cons of using CSS Frameworks**
 
-Chihuahua
-$0/mo
-5 Matches Per Day
-10 Messages Per Day
-Unlimited App Usage
+1. Class bloat: a lot of styling going into the HTML file.
+2. Customization: Not full control in every pixel.
 
-Labrador
-$15/mo
-Unlimited Matches
-Unlimited Messages
-Unlimited App Usage
+**When to use CSS Frameworks?**
 
-Mastiff
-$29/mo
-Pirority Listing
-Unlimited Matches & Messages
-Unlimited App Usage
+1. Building a ***Mobile First*** responsive website that you want to put online very quickly. 
+2. Access beautiful components designed by professional designers.
+
+**When NOT to use CSS Frameworks?**
+
+1. Simple website where you just need HTML and CSS.
+2. Building a really complex custom design website.
+
+**How to use Bootstrap?**
+
+1. Go to [GetBootstrap.com](https://getbootstrap.com/) 
+2. Include bootstrap file via CDN link
+    1. Include the link we need into the <head> of our HTML
+3. Then go to the **Docs** section find whatever pre-build CSS components you need, and paste it into <body> section
+4. Modify the pre-build component based on your need
+
+---
+
+### Bootstrap Layout
+
+​		Understanding the **12-columns Bootstrap layout system**.
+
+The *12-columns Bootstrap layout system* is made of 3 components
+
+1. A <div> that has a class of container
+2. Another <div> of class row
+3. Inside the row, is where the items be laid out.
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col">Hello</div>
+    </div>
+</div>
+```
+
+* When we have **multiple** columns laid out inside the rows, Bootstrap will **automatically** try to give every column inside the row **equal spacing** and space them across the **entire width** of the container.
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-2">Hello</div>
+        <div class="col-4">Hello</div>
+        <div class="col-6">Hello</div>
+    </div>
+</div>
+```
+
+* We can also specify how many of these columns does the item would occupy.
+* In this case, `col-2` means this item will take 2/12 of the columns in the row.
+* In other words, we are sizing the container without going to write CSS code, we can simply do it in HTML.
+
+---
+
+#### Breakpoint
+
+​		Bootstrap has 6 default breakpoints:
+
+| Breakpoint        | Class Infix | Dimension | Device           |
+| ----------------- | ----------- | --------- | ---------------- |
+| Extra Small       | None        | <576px    | Longer than wide |
+| Small             | sm          | >=576px   | Mobile           |
+| Medium            | md          | >=768px   | iPad             |
+| Large             | lg          | >=992px   | Laptop           |
+| Extra Large       | xl          | >=1200px  | Desktop          |
+| Extra Extra Large | xxl         | >=1400px  | TV...            |
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">Hello</div>
+        <div class="col-md-4">Hello</div>
+        <div class="col-lg-6">Hello</div>
+    </div>
+</div>
+```
+
+* Here is an example of using breakpoint.
+* Given this, we don’t need *Media Queries* as much, because this already covers a lot of device dimensions.
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-4">Hello</div>
+    </div>
+</div>
+```
+
+* We can have **multiple breakpoints** in a single <div>.
+* On *large* size devices, this column will take 4/12 of the width.
+* On *medium* size devices, this column will take 8/12 of the width.
+* On *small* size devices, this column will take 12/12 of the width OR full width.
+
+---
+
+#### Mix & Match
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-2">Hello</div>
+        <div class="col-4">Hello</div>
+        <div class="col">Hello</div>
+    </div>
+</div>
+```
+
+* In this case, we only assigned value to the first 2 columns, and the last column would automatically adjust in size in order to take up whatever proportion remains.
+
+---
+
+### Bootstrap Components
+
+​		You can find all kinds of components from https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+1. We need to include the CDN link for stylesheet
+2. We need to include the script link for the scripting code that gives us all of the functionality.
+
+```html
+/*CDN link for Bootstrap*/
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+```
+
+```html
+/*Scripting code link for Bootstrap*/
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+```
+
+* We would have to put the CDN link in <head> 
+* put the scripting link just before the closing tag of <body>
+
+---
+
+#### Spacing
+
+​		The classes are named using the format: {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, xxl.
+
+*Property:*
+
+* m - for classes that set *margin*
+* p - for classes that set *padding*
+
+*Sides*
+
+* t - margin-top or padding-top
+* b - margin-bottom or padding-bottom 
+* s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
+* e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
+* x - for classes that set both *-right and *-left
+* y - for classes that set both *-top and *-bottom
+* blank - margin and padding on all 4 sides of the element
+
+*Size*
+
+* 0 - eliminate the margin or padding
+* 1 - set margin or padding to $spacer * 0.25
+* 2 - set margin or padding to $spacer * 0.5 
+* 3 - set margin or padding to $spacer * 1
+* 4 - set margin or padding to $spacer * 1.5
+* 5 - set margin or padding to $spacer * 3
+* auto - for classes that set the margin to auto
+
+```css
+mt-5
+```
+
+* margin - top -size 5
+
+```css
+my-2
+```
+
+* margin - top and bottom - size 2
+
+---
+
+**Dark Mode**
+
+​		Change the website to Dark Mode
+
+```html
+<html lang="en" data-bs-theme="dark"></html>
+```
+
+* Simply adding `data-bs-theme=“dark”` to the html tag
